@@ -1,5 +1,15 @@
-let message: string;
+// const text = "This is a test and it should be stored in a file!"
 
-message = "Hello world in Deno";
+// const encoder = new TextEncoder()
+// const data = encoder.encode(text)
 
-console.log(message)
+// Deno.writeFile('message.txt', data).then(()=>{
+//     console.log('Wrote to a file')
+// })
+
+
+import { serve } from "https://deno.land/std@0.134.0/http/server.ts";
+
+serve(() => new Response("Hello World\n"));
+
+console.log("http://localhost:8000/");
